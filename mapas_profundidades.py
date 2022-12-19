@@ -21,7 +21,7 @@ print(os.path.dirname(inspect.getfile(GLPNForDepthEstimation))  )
 ruta_script = '/home/lino/Documentos/personal/LiDAR_movil'
 ruta_fotogramas = ruta_script+'/fotogramas'
 # os.chdir(ruta_fotogramas)
-archivo_fotograma_1 = ruta_fotogramas+'/fotograma_2.jpeg'
+archivo_fotograma_1 = ruta_fotogramas+'/fotograma_4.jpeg'
 
 
 
@@ -63,9 +63,9 @@ fig, ax = plt.subplots(1, 2)
 ax[0].imshow(image)
 ax[0].tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)
 ax[0].set_title('Imagen original')
-ax[1].imshow(output, cmap='plasma')
+ax[1].imshow(output, cmap='Greys')
 ax[1].tick_params(left=False, bottom=False, labelleft=False, labelbottom=False)
 ax[1].set_title('Mapa de profundidades')
-fig.colorbar(ax[1].imshow(output, cmap='plasma'), orientation='vertical')
+fig.colorbar(ax[1].imshow(output, cmap='Greys'), orientation='vertical')
 plt.tight_layout()
 plt.pause(5)
